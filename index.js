@@ -51,6 +51,7 @@ function createImage(settings) {
 
 class Captchashi {
   constructor(settings) {
+    settings = !settings || typeof settings !== "object" ? {} : settings;
     this.key = randomKey(settings.keySettings || {});
     if ((settings.imageSettings || {}).image !== false) this.image = createImage(settings.imageSettings || {}).replace("Yashinu", this.key);
   };
