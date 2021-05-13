@@ -3,7 +3,7 @@ function randomElement(arr) {
 };
 
 function randomKey(settings) {
-  let setting = settings || {};
+  let setting = { length: settings.length, characters: settings.characters, case: settings.case };
   let alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   let numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
@@ -31,7 +31,7 @@ function randomKey(settings) {
 };
 
 function createImage(settings) {
-  let setting = settings || {};
+  let setting = { image: settings.image, size: settings.size, backgroundColor: settings.backgroundColor, textColor: settings.textColor };
 
   if (!setting.size) setting.size = "2000x500";
   if (isNaN(setting.size.split("x")[0]) || isNaN(setting.size.split("x")[1])) throw new Error("You must specify a valid size! (ex: 2000x500)");
@@ -51,7 +51,7 @@ function createImage(settings) {
 
 class Captchashi {
   constructor(settings) {
-    let setting = ((!settings || typeof settings !== "object") ? {} : settings);
+    let setting = ((!settings || typeof settings !== "object") ? {} : { keySettings: settings.keySettings, imageSettings: settings.imageSettings });
     this.key = randomKey(setting.keySettings || {});
     if ((setting.imageSettings || {}).image !== false) this.image = createImage(setting.imageSettings || {}).replace("Yashinu", this.key);
   };
