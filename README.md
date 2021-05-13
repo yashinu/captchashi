@@ -37,7 +37,7 @@ const keySettings = {
 * `length` Length of the key. `|` Oluşturulacak kodun uzunluğu. **(1-12)**
 * `characters` Characters of the key. `|` Oluşturulacak kodun karakterleri. **(alphabetic`/`numeric`/`alphanumeric`/`hex`/`customizable)**
   * customizable example: `"asdhdfe159357"`
-* `case` Case of the key (upper/lower/both). `|` Oluşturulacak kodun durumu (büyük/küçük/ikisi). **(upper`/`lower`/`both)**
+* `case` Case of the key (upper/lower/both). `|` Oluşturulacak kodun büyük/küçük harf durumu (büyük/küçük/ikisi). **(upper`/`lower`/`both)**
 
 **imageSettings** (optional) `|` **Resim Ayarları** (Seçmeli)
 ```js
