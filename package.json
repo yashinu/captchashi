@@ -1,6 +1,6 @@
 {
   "name": "captchashi",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A library to help you create random key with image for captcha systems. - Yashinu Captcha",
   "main": "index.js",
   "scripts": {
